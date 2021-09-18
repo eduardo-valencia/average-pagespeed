@@ -3,7 +3,7 @@ import keys from './config/keys'
 
 const getPageSpeedScore = async (): Promise<number> => {
   const response = await axios.get(
-    `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${keys.url}&key=${keys.pageSpeedInsightsKey}`
+    `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${keys.url}&key=${keys.pageSpeedInsightsKey}&strategy=${keys.strategy}`
   )
   return response.data.lighthouseResult.categories.performance.score
 }

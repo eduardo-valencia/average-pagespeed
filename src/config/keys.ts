@@ -8,6 +8,7 @@ interface Keys {
   url: string
   pageSpeedInsightsKey: string
   testsNumber: number
+  strategy: string
 }
 
 const getCamelCasedKeys = (): object =>
@@ -28,6 +29,7 @@ const validateKeys = () => {
     'pageSpeedInsightsKey',
     'url',
     'testsNumber',
+    'strategy',
   ]
   requiredKeys.forEach(validateKeyExists(camelCasedKeys))
 }
